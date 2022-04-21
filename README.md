@@ -3,11 +3,16 @@
 This is an example Flask project, using my preferred project structure and
 development environment setup. The instructions below are tailored for macOS.
 
-This project implements the Flask tutorial from the [official documentation](https://flask.palletsprojects.com/en/2.1.x/tutorial/).
+This project implements the Flask tutorial from
+the [official documentation](https://flask.palletsprojects.com/en/2.1.x/tutorial/)
+. The application is called `flaskr` which is a simple blogging app. The
+project is structured as a python package named `flaskr`.
 
 ## Development Setup
 
-**Prerequisites:** Follow one-time steps at https://github.com/jenkinz/python-project-template#one-time-steps-per-machine, then return 
+**Prerequisites:** Follow one-time steps
+at https://github.com/jenkinz/python-project-template#one-time-steps-per-machine
+, then return
 here and run the commands below.
 
 1. Run the following to create the Conda environment for this project:
@@ -32,3 +37,8 @@ here and run the commands below.
 
         $ cd tests
         $ pytest .
+7. Optional: Create a PyCharm run configuration:
+    - Select **Flask Server** as the type
+    - Enter `flaskr` as the name
+    - Select **Module** and enter `flaskr` in the **Target** field
+    - Ensure `FLASK_ENV` is set to `development` and `FLASK_DEBUG` is checked
