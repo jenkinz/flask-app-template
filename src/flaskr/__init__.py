@@ -32,4 +32,8 @@ def create_app(test_config: Optional[Mapping[str, Any]] = None) -> Flask:
     def hello() -> str:
         return "Hello, World!"
 
+    from . import db
+
+    db.init_app(app)
+
     return app

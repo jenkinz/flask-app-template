@@ -1,39 +1,39 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.1.0
-  hooks:
-  - id: check-merge-conflict
-  - id: check-yaml
-#  - id: detect-aws-credentials
-  - id: detect-private-key
-  - id: end-of-file-fixer
-    exclude: ^\.idea/
-#  - id: requirements-txt-fixer
-  - id: trailing-whitespace
-    exclude: ^\.idea/|.*\.md$
-- repo: https://github.com/asottile/reorder_python_imports
-  rev: v3.0.1
-  hooks:
-  - id: reorder-python-imports
-- repo: https://github.com/ambv/black
-  rev: 22.3.0
-  hooks:
-  - id: black
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 4.0.1
-  hooks:
-  - id: flake8
-    exclude: ^(tests|venv)/
-- repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.941
-  hooks:
-  - id: mypy
-- repo: https://github.com/pre-commit/mirrors-fixmyjs
-  rev: v2.0.0
-  hooks:
-  - id: fixmyjs
-    args: ['-l', '-c', '.jshintrc']
-- repo: https://github.com/pre-commit/mirrors-jshint
-  rev: v2.13.4
-  hooks:
-  - id: jshint
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      #  - id: detect-aws-credentials
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^\.idea/
+      #  - id: requirements-txt-fixer
+      - id: trailing-whitespace
+        exclude: ^\.idea/|.*\.md$
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.0.1
+    hooks:
+      - id: reorder-python-imports
+  - repo: https://github.com/ambv/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+        exclude: ^(tests|venv)/
+  #- repo: https://github.com/pre-commit/mirrors-mypy
+  #  rev: v0.941
+  #  hooks:
+  #  - id: mypy
+  - repo: https://github.com/pre-commit/mirrors-fixmyjs
+    rev: v2.0.0
+    hooks:
+      - id: fixmyjs
+        args: [ '-l', '-c', '.jshintrc' ]
+  - repo: https://github.com/pre-commit/mirrors-jshint
+    rev: v2.13.4
+    hooks:
+      - id: jshint
