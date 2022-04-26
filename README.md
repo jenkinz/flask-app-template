@@ -37,7 +37,11 @@ here and run the commands below.
 
         $ cd tests
         $ pytest .
-7. Optional: Create a PyCharm run configuration:
+7. Initialize the local sqlite database:
+
+        $ export FLASK_APP=src/flaskr
+        $ flask init-db
+8. Optional: Create a PyCharm run configuration:
     - Select **Flask Server** as the type
     - Enter `flaskr` as the name
     - Select **Module** and enter `flaskr` in the **Target** field
