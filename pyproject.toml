@@ -3,6 +3,9 @@ name = "flask-app-template"
 version = "0.1.0"
 description = ""
 authors = ["Brian Jenkins <...@....com>"]
+packages = [
+    { include = "flaskr", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
