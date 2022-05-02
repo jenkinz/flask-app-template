@@ -9,6 +9,7 @@ from flask.testing import FlaskCliRunner
 from flaskr import create_app
 from flaskr.db import get_db
 from flaskr.db import init_db
+from werkzeug.test import TestResponse
 
 with open(os.path.join(os.path.dirname(__file__), "data.sql"), "rb") as f:
     _data_sql = f.read().decode("utf-8")
@@ -53,3 +54,27 @@ def runner(app: Flask) -> FlaskCliRunner:
     :return: The runner to use to test registered Click commands.
     """
     return app.test_cli_runner()
+
+
+class AuthActions(object):
+    """This class is used to 'login' a test user for use by view tests for
+    views that require login."""
+
+    def __init__(self, client: FlaskClient) -> None:
+        self._client = client
+
+    def login(
+        self, username: str = "test", password: str = "test"
+    ) -> TestResponse:
+        return self._client.post(
+            "/auth/login", data={"username": username, "password": password}
+        )
+
+    def logout(self) -> TestResponse:
+        return self._client.get("/auth/logout")
+
+
+@pytest.fixture
+def auth(client: FlaskClient) -> AuthActions:
+    """Test fixture to perform login/logout authentication for use by tests."""
+    return AuthActions(client)
