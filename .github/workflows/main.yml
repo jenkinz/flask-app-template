@@ -32,4 +32,4 @@ jobs:
           python -m pip install poetry==${{ matrix.poetry }}
           poetry install
       - name: Run pytest
-        run: pytest
+        run: python -m pytest
