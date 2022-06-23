@@ -11,9 +11,8 @@ project is structured as a python package named `flaskr`.
 ## Development Setup
 
 **Prerequisites:** Follow one-time steps
-at https://github.com/jenkinz/python-project-template#one-time-steps-per-machine
-, then return
-here and run the commands below.
+at https://github.com/jenkinz/python-project-template#one-time-steps-per-machine,
+then return here and run the commands below.
 
 1.  Run the following to create the Conda environment for this project:
 
