@@ -4,8 +4,8 @@ This is an example Flask project, using my preferred project structure and
 development environment setup. The instructions below are tailored for macOS.
 
 This project implements the Flask tutorial from
-the [official documentation](https://flask.palletsprojects.com/en/2.1.x/tutorial/)
-. The application is called `flaskr` which is a simple blogging app. The
+the [official documentation](https://flask.palletsprojects.com/en/2.1.x/tutorial/).
+The application is called `flaskr` which is a simple blogging app. The
 project is structured as a python package named `flaskr`.
 
 ## Development Setup
