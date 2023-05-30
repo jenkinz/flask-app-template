@@ -37,8 +37,7 @@ then return here and run the commands below.
 
 6.  Run the project test suite to verify everything is working:
 
-        $ cd tests
-        $ pytest .
+        $ pytest
 
 7.  Initialize the local sqlite database:
 
