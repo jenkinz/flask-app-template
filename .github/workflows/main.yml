@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         python: [ 3.9 ]
-        poetry: [ 1.1.13 ]
+        poetry: [ 1.4.0 ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
